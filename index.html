@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Recency Forcing Results</title>
+<link rel="stylesheet" href="assets/site.css?v=3">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Recency Forcing <span class="brand-sub">Qualitative results</span></div>
+  <button id="keys-open" class="ghost" type="button">Keyboard <kbd>?</kbd></button>
+</header>
+
+<main>
+  <nav id="groups" class="groups" aria-label="Result sets"></nav>
+  <p id="blurb" class="blurb"></p>
+
+  <section id="theater" class="theater" aria-label="Video comparison">
+    <div class="stage-head">
+      <div>
+        <h1 id="title"></h1>
+        <p id="count" class="muted"></p>
+      </div>
+      <div class="views" role="group" aria-label="Layout">
+        <button type="button" data-view="grid">Grid</button>
+        <button type="button" data-view="focus">Focus</button>
+      </div>
+    </div>
+
+    <div id="stage" class="stage"></div>
+
+    <div class="transport">
+      <button id="play" class="round" type="button" aria-label="Play">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path id="play-icon" d="M7 4v16l13-8z"/></svg>
+      </button>
+      <span id="clock" class="clock">0:00 / 0:00</span>
+      <div id="timeline" class="timeline" role="slider" tabindex="0" aria-label="Seek all videos" aria-valuemin="0">
+        <div id="ticks" class="ticks"></div>
+        <div id="fill" class="fill"></div>
+        <div id="head" class="head"></div>
+        <div id="marks" class="marks"></div>
+      </div>
+      <div class="speeds" role="group" aria-label="Playback speed">
+        <button type="button" data-rate="0.5">½×</button>
+        <button type="button" data-rate="1">1×</button>
+        <button type="button" data-rate="2">2×</button>
+      </div>
+    </div>
+
+    <details class="prompt-box" open>
+      <summary>Prompt and what to look for</summary>
+      <p id="prompt" class="prompt"></p>
+      <p id="note" class="note"></p>
+    </details>
+
+    <section class="drift" aria-label="Filmstrip across time">
+      <div class="drift-head">
+        <h2>Across the whole video</h2>
+        <span class="muted">Each row is one video, sampled evenly from start to end. Click a frame to jump there.</span>
+      </div>
+      <div id="strips" class="strips"></div>
+    </section>
+  </section>
+
+  <section class="wall" aria-label="All prompts">
+    <div class="wall-head">
+      <h2>All results</h2>
+      <span id="wall-count" class="muted"></span>
+    </div>
+    <div id="wall"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Anonymous material for double-blind review. This page contains no analytics, sets no cookies and loads nothing from other sites. Videos are silent and shown in their original encoded quality; only file metadata was removed.</p>
+</footer>
+
+<dialog id="keys" class="keys">
+  <h2>Keyboard</h2>
+  <dl>
+    <dt><kbd>Space</kbd></dt><dd>Play or pause all</dd>
+    <dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Back or forward 2 s</dd>
+    <dt><kbd>,</kbd> <kbd>.</kbd></dt><dd>Step one frame (paused)</dd>
+    <dt><kbd>G</kbd> <kbd>F</kbd></dt><dd>Grid or Focus</dd>
+    <dt><kbd>1</kbd>–<kbd>5</kbd></dt><dd>Focus on a method</dd>
+    <dt><kbd>N</kbd> <kbd>P</kbd></dt><dd>Next or previous prompt</dd>
+  </dl>
+  <button id="keys-close" class="ghost" type="button">Close</button>
+</dialog>
+
+<script src="assets/data.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
+</body>
+</html>
